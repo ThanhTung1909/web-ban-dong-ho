@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.trangchu{
+    color: #fff;
+}
+.t1{
+    color:#a8741a;
+}
+i{
+    color: #fff;
+}
+.container{
+    max-width: 100%;
+}
+.section-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(34, 34, 34);
+}
+.section-1>a{
+    text-decoration: none;
+}
+.section-2{
+    width: 1200px;
+    height: 1050px;
+    margin: auto;
+}
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-container input {
+    display: inline block;
+    width: 330px;
+    height: 40px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(206, 212, 218);
+}
+
+.input-container .required {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: red;
+    font-weight: bold;
+}
+.tieude{
+    text-align: center;
+    font-size: 25px;
+}
+.thanhtoan{
+    display: flex;
+}
+.thanhtoanleft{
+    width: 720px;
+    height: 895px;
+}
+.thanhtoanright{
+    width: 405px;
+    height: 355px;
+    margin-left: 40px;
+    
+}
+img{
+    width: 30px;
+    height: 20px;
+}
+h3{
+    height: 20px;
+    font-size: 16px;
+}
+.thanhtoanlefttop{
+    width: 730px;
+    height: 440px;
+    padding: 15px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 3px 0px;
+
+}
+.thanhtoanleftbottom>.row{
+    box-shadow: 0px 0px 3px 0px;
+}
+.dienthoai{
+    margin-top: 18px;
+    margin-bottom: 17px;
+}
+select{
+    width: 330px;
+    height: 40px;
+    border-color: rgb(206, 212, 218);
+}
+.diachi{
+    margin-top: 10px;
+    margin-bottom: 13px;
+}
+#select2{
+    margin-top: 13px;
+}
+#select3{
+    margin-top: 13px;
+}
+.r1{
+    display: flex;
+}
+.r2{
+    width: 400px;
+    height: 110px;
+}
+.r3>input{
+    width: 360px;
+    height: 160px;
+}
+.r4>button{
+    margin-top: 20px;
+    width: 360px;
+    height: 50px;
+    background-color: #288ad6;
+    border: 0px;
+    color:aliceblue;
+    
+}
+.tt{
+    padding: 10px;
+    box-shadow: 0px 0px 3px 0px;
+}

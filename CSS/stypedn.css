@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    background-color: rgb(34, 34, 34);
+    font-family: 'Rubik', sans-serif;
+    height: 700px;
+}
+.section-1>p{
+    text-align: center;
+    color: #FFFF;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.section-1-item{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.section-1-item>i{
+    color: #FFFF;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.trangchu{
+    color: #FFFF;
+    text-decoration: none;
+}
+.trangchu:hover{
+    color: rgb(168, 116, 26);
+}
+.dangnhap{
+    color: rgb(168, 116, 26);
+    text-decoration: none;
+}
+.tieude{
+    width: 600px;
+    height: 35px;
+    margin: auto;
+    font-size: 27px;
+    max-height: 100%;
+    color: #FFFF;
+}
+.form{
+    width: 600px;
+    height: 478px;
+    padding: 50px 50px 50px 50px;
+    margin: auto;
+    background-color: rgb(52, 52, 52);
+}
+form>label{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+form{
+    width: 500px;
+    height: 230px;
+}
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-container input {
+    background-color: rgb(36, 36, 36);
+    border: 0px;
+    width: 500px;
+    height: 45px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.input-container .required {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: red;
+    font-weight: bold;
+}
+input:focus {
+    outline: none;
+}
+input{
+    caret-color: #FFFF;
+    color: rgb(255, 255, 255);
+}
+form>label{
+    display: inline-block;
+    margin-top: 14px;
+}
+form>button{
+    width: 140px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(46, 46, 46);
+}
+form>button:hover{
+    background-color: rgb(168, 116, 26);
+}
+.f2{
+    width: 500px;
+    height: 24px;
+}
+.f2>a{
+    text-decoration: none;
+    color: rgb(234, 74, 48);
+}
+.f2>a:hover{
+    color: red;
+}
+.dk{
+    margin-left: 315px;
+}
+.f3{
+    position: relative;
+    width: 500px;
+    height: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.f3-1>p{
+    width: 60px;
+    height: 24px;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    right: 220px;
+    z-index: 2;
+}
+.f3-2>hr{
+    position: absolute;
+    width: 500px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    top: 10px;
+}
+.f4{
+    width: 500px;
+    height: 45px;
+}
+.f4 a{
+    width: 160px;
+    height: 45px;
+    display: inline-block;
+    text-decoration: none;
+}
+span{
+    display: inline-block;
+}
+.Facebook{
+    background-color: rgb(59, 89, 152);
+    border-radius: 45px 45px 45px 45px;
+    margin-right: 5px;
+}
+.Google{
+    background-color: #dc4e41;
+    border-radius: 45px 45px 45px 45px;
+    margin-right: 5px;
+}
+.Zalo{
+    background-color: #0591e9;
+    border-radius: 45px 45px 45px 45px;
+}
+.fb{
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    background-color: #FFFF;
+    border-radius: 45px 45px 45px 45px;
+}
+.gg{
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    background-color: #FFFF;
+    border-radius: 45px 45px 45px 45px;
+}
+.zl{
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    background-color: #FFFF;
+    border-radius: 45px 45px 45px 45px;
+}
+.f{
+    padding-top: 5px;
+    color: rgb(59, 89, 152);
+}
+.g{
+    padding-top: 6px;
+    color: #dc4e41;
+}
+.z{
+    padding-top: 7px;
+    color: #0591e9;
+}
+.m{
+    color: #FFFF;
+}
+.m:hover{
+    color: rgb(168, 116, 26);
+}
+.Facebook {
+    transition: box-shadow 300ms ease; 
+}
+
+.Facebook:hover {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7); 
+}
+.Facebook:hover .m {
+    color: rgb(168, 116, 26); 
+}
+.Google{
+    transition: box-shadow 300ms ease; 
+}
+
+.Google:hover {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7); 
+}
+.Google:hover .m {
+    color: rgb(168, 116, 26); 
+}
+.Zalo {
+    transition: box-shadow 300ms ease; 
+}
+
+.Zalo:hover {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7); 
+}
+.Zalo:hover .m {
+    color: rgb(168, 116, 26); 
+}

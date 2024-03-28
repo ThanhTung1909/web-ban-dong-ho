@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    background-color: rgb(34, 34, 34);
+    font-family: 'Rubik', sans-serif;
+    height: 500px;
+}
+.section-1{
+    padding-top: 30px;
+    height: 140px;
+}
+.section-1>p{
+    text-align: center;
+    color: #FFFF;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.section-1-item{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.section-1-item>i{
+    color: #FFFF;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.trangchu{
+    color: #FFFF;
+    text-decoration: none;
+}
+.trangchu:hover{
+    color: rgb(168, 116, 26);
+}
+.dangnhap{
+    color: rgb(168, 116, 26);
+    text-decoration: none;
+}
+.section-2{
+    width: 1200px;
+    height: 215.5px;
+    margin: auto;
+    margin-top: 60px;
+}
+.item1{
+    display: flex;
+    width: 1200px;
+    height: 44px;
+}
+.i1{
+    font-size: 16px;
+    color: #FFFF;
+    width: 480px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+.i{
+    font-size: 16px;
+    color: #FFFF;
+    width: 240px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+.i3>p{
+    margin-left: 150px;
+    text-align: right;
+}
+.item2{
+    width: 1200px;
+    height: 22.5px;
+    color: #FFFF;
+    font-size: 15px;
+}
+.item3{
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    border: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    color: #FFFF;
+}
+.item3>h3{
+    color: #FFFF;
+    font-size: 16px;
+    height: 30px;
+    margin-top: 20px;
+}
+.item3>div{
+    color: rgb(168, 116, 26);
+    font-size: 18px;
+    height: 30px;
+    margin-top: 20px;
+}
+.item4{
+    border: 0px;
+    border-top: 1px;
+    border-style: solid;
+    border-color: #FFFF;
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+}
+.nut1{
+    width: 235px;
+    height: 45px;
+    background-color: rgb(168, 116, 26);
+    color: #FFFF;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.nut2{
+    width: 156px;
+    height: 45px;
+    background-color: rgb(168, 116, 26);
+    color: #FFFF;
+    margin-top: 20px;
+}
