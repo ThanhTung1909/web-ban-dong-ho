@@ -1,5 +1,6 @@
 const products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
 let carts = JSON.parse(localStorage.getItem('carts'));
+const patekPhilippeProduct = products.filter(product => product.brand === 'Patek Philippe');
 
 //menu bar
 const menuBar = document.querySelector('.menu-bar');
@@ -28,8 +29,9 @@ subIcon.addEventListener('click', () => {
 })
 
 // add product
-const newProductsItems = document.getElementById('product');
-const newProductsTemplate = products.map((product) => {
+const PatekPhilippeProductsItems = document.getElementById('PatekPhilippe');
+
+const newProductsTemplate = patekPhilippeProduct.map((product) => {
   const discount = product.discount !== '' ? `<input type="text" readonly value="-${product.discount}">` : '';
   const dis = product.discount !== '' ? (parseInt(product.discount) / 100) : 1;
   const price = product.price !== 'Liên Hệ' ? parseInt(product.price) : product.price;
@@ -57,7 +59,7 @@ const newProductsTemplate = products.map((product) => {
     </div>  
   `
 });
-newProductsItems.innerHTML = newProductsTemplate.join('');
+PatekPhilippeProductsItems.innerHTML = newProductsTemplate.join('');
 const btnCart = document.querySelectorAll('.cart');
 btnCart.forEach((btn) => {
   const info = btn.parentElement;
@@ -133,7 +135,7 @@ const table = cartModal.querySelector('table');
 const cartsModal = JSON.parse(localStorage.getItem('carts')) || [];
 if (cartsModal.length == 0) {
   table.innerHTML = '<h2>Không có sản phẩm';
-  cartModal.style.height = 'auto';
+  cartModal.style.height = "auto";
 }
 else{
   const cartTemplete = cartsModal.map((cart) => {
@@ -166,11 +168,10 @@ btnRemove.forEach((btn, index) => {
 
 // end add to cart
 // pagination
-console.log(products);
-if (products.length > 0) {
+if (patekPhilippeProduct.length > 0) {
   let currentPage = 1;
   let limit = 6;
-  let totalPages = Math.ceil(products.length / limit);
+  let totalPages = Math.ceil(patekPhilippeProduct.length / limit);
   let listProduct = document.querySelectorAll('.product-item');
 
   function loadItem() {

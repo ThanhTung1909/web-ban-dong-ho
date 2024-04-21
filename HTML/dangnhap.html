@@ -2,11 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/CSS/stypedn.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <title>Watch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/stypedn.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="section">
+        <div class="row">
+            <nav class="navbar1 navbar-light ">
+                <div class="row">
+                    <div class="col-menu">
+                        <div class="menu-bar">
+                            <span></span>
+                        </div>
+                        <div class="menu-items">
+                            <ul>
+                                <li class="menu-item"><a href="./Home.html">Trang chủ</a></li>
+                                <li class="menu-item"><a href="./gioithieu.html">Giới thiệu</a></li>
+                                <li class="menu-item">
+                                    <a href="./SanPham.html">Sản phẩm</a>
+                                    <i class="icon-menu bi bi-plus"></i>
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="./SanPham_Patek Philippe.html">Patek Philippe</a>
+                                            <i class="sub-icon-menu bi bi-plus"></i>
+                                            <ul class="sub-sub-menu">
+                                                <li class="sub-menu-item"><a
+                                                        href="./SanPham_Patek Philippe.html">Philippe</a></li>
+                                                <li class="sub-menu-item"><a
+                                                        href="./SanPham_Patek Philippe.html">Patek</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu-item"><a href="./SanPham_Hublot.html">Hublot</a></li>
+                                        <li class="sub-menu-item"><a href="./SanPham_Rolex.html">Rolex</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="#">Dịch vụ</a></li>
+                                <li class="menu-item"><a href="./tintuc.html">Tin tức</a></li>
+                                <li class="menu-item"><a href="#">Liên hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="form-inline">
+                            <form action="" class="search-bar">
+                                <input type="text" placeholder="Nhập từ khóa.......">
+                                <button type="submit"><a href="#"><i class="bi bi-search"></i></a></button>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="account-bar">
+                        <button type="button"><a href="#"><i class="bi bi-person-fill"></i></a></button>
+                    </div>
+
+                    <div class="cart-bar" data-target="#myCart">
+                        <button type="button">
+                            <a href="#">
+                                <i class="bi bi-cart-fill" data-toggle="modal" data-target="#cart"></i>
+                            </a>
+                            <input type="text" readonly value="0">
+                        </button>
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="section row">
             <div class="section-1">
                 <p>Đăng nhập</p>
                 <div class="section-1-item">
@@ -27,17 +97,19 @@
                                 <input type="text" id="username" name="username" placeholder="Tên truy cập" required>
                                 <span class="required">*</span>
                             </div><br>
+                            <span id="usernameError" style="color: red;"></span><br>
                             <label for="" class="l1">Mật khẩu :</label><br>
                             <div class="input-container">
-                                <input type="password" placeholder="Mật khẩu" required>
+                                <input id="password" type="password" placeholder="Mật khẩu" required>
                                 <span class="required">*</span>
                             </div><br>
-                            <button type="submit">Đăng nhập</button>
+                            <span id="passwordError" style="color: red;"></span><br>
+                            <button id="login" type="submit">Đăng nhập</button>
                         </form>
                     </div> 
                     <div class="f2">
                         <a href="#" title="Quên mật khẩu">Quên mật khẩu?</a>
-                        <a href="#" title="Đăng ký " class="dk">Đăng ký</a>    
+                        <a href="../HTML/dangky.html" title="Đăng ký " class="dk">Đăng ký</a>    
                     </div>
                     <div class="f3">
                         <div class="f3-1">
@@ -64,6 +136,35 @@
                 </div>               
             </div>
         </div>
+        <div class="footer row">
+            <hr>
+            <div class="footer-items">
+                <div class="footer-item">
+                    <h2>VỀ CHÚNG TÔI</h2>
+                    <p>Phạm Thanh Tùng - 22700371</p>
+                </div>
+                <div class="footer-item">
+                    <h2>DANH MỤC SẢN PHẨM</h2>
+                    <a href="#">Patek Philippe</a>
+                    <a href="">Hublot</a>
+                    <a href="">Rolex</a>
+                </div>
+                <div class="footer-item">
+                    <h2>THỐNG KÊ</h2>
+                    <p>Tổng lượt truy cập: <span>714</span></p>
+                    <p>Tháng qua: <span>57</span></p>
+                    <p>Tuần qua: <span>26</span></p>
+                    <p>Hôm nay: <span>7</span></p>
+                    <p>Đang online: <span>7</span></p>
+                </div>
+                <div class="footer-item">
+                    <h2>FANPAGE</h2>
+
+                </div>
+            </div>
+        </div>
     </div>  
+    <script src="../JS/script.js"></script>
+    <script src="../JS/login.js"></script>
 </body>
 </html>

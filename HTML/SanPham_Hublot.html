@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
-    
+
     <title>Watch</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/sanpham.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -25,39 +28,58 @@
                         </div>
                         <div class="menu-items">
                             <ul>
-                                <li class="menu-item"><a href="">Trang chủ</a></li>
-                                <li class="menu-item"><a href="">Giới thiệu</a></li>
-                                <li class="menu-item"><a href="">Sản phẩm</a></li>
-                                <li class="menu-item"><a href="">Dịch vụ</a></li>
-                                <li class="menu-item"><a href="">Tin tức</a></li>
-                                <li class="menu-item"><a href="">Liên hệ</a></li>
+                                <li class="menu-item"><a href="./Home.html">Trang chủ</a></li>
+                                <li class="menu-item"><a href="./gioithieu.html">Giới thiệu</a></li>
+                                <li class="menu-item">
+                                    <a href="./SanPham.html">Sản phẩm</a>
+                                    <i class="icon-menu bi bi-plus"></i>
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="./SanPham_Patek Philippe.html">Patek Philippe</a>
+                                            <i class="sub-icon-menu bi bi-plus"></i>
+                                            <ul class="sub-sub-menu">
+                                                <li class="sub-menu-item"><a
+                                                        href="./SanPham_Patek Philippe.html">Philippe</a></li>
+                                                <li class="sub-menu-item"><a
+                                                        href="./SanPham_Patek Philippe.html">Patek</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu-item"><a href="./SanPham_Hublot.html">Hublot</a></li>
+                                        <li class="sub-menu-item"><a href="./SanPham_Rolex.html">Rolex</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="#">Dịch vụ</a></li>
+                                <li class="menu-item"><a href="./tintuc.html">Tin tức</a></li>
+                                <li class="menu-item"><a href="#">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="widget">
-                       <div class="form-inline"> 
+                        <div class="form-inline">
                             <form action="" class="search-bar">
                                 <input type="text" placeholder="Nhập từ khóa.......">
                                 <button type="submit"><a href="#"><i class="bi bi-search"></i></a></button>
                             </form>
-                            
+
                         </div>
                     </div>
                     <div class="account-bar">
-                        <button type="button" ><a href="#"><i class="bi bi-person-fill"></i></a></button>
+                        <button type="button"><a href="#"><i class="bi bi-person-fill"></i></a></button>
                     </div>
-                    <div class="cart-bar">
-                        <button type="button" >
+
+                    <div class="cart-bar" data-target="#myCart">
+                        <button type="button">
                             <a href="#">
-                            <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-cart-fill" data-toggle="modal" data-target="#cart"></i>
                             </a>
-                            <span class="badge badge-warning">0</span>
+                            <input type="text" readonly value="0">
                         </button>
+                        
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="content">
+        <div class="content row">
             <div class="intro">
                     <h2>Sản Phẩm</h2>
                     <a href="Home.html">Trang Chủ </a>
@@ -69,65 +91,58 @@
             <div class="main_content">
                 <div class="section">
                     <ul>
-                        <li><h3>Danh Mục</h3></li>
-                        <li id="li1"><a href="SanPham_Patek Philippe.html"><p>Patek Philippe</p></a> </li>
-                        <li id="li1"><a href="SanPham_Hublot.html"><p>Hublot</p></a></li>
-                        <li id="li1"><a href="SanPham_Rolex.html"><p>Rolex</p></a></li>
-                        <li ><h3>Phiên bản sản phẩm</h3></li>
-                        <li > 
+                        <li>
+                            <h3>Danh Mục</h3>
+                        </li>
+                        <li id="li1"><a href="SanPham_Patek Philippe.html">
+                                <p>Patek Philippe</p>
+                            </a> </li>
+                        <li id="li1"><a href="SanPham_Hublot.html">
+                                <p>Hublot</p>
+                            </a></li>
+                        <li id="li1"><a href="SanPham_Rolex.html">
+                                <p>Rolex</p>
+                            </a></li>
+                        <li>
+                            <h3>Phiên bản sản phẩm</h3>
+                        </li>
+                        <li>
                             <div class="lb2">
                                 <form action="">
-                                    <label for="" ><h5>Loại dây</h5></label>
+                                    <label for="">
+                                        <h5>Loại dây</h5>
+                                    </label>
                                     <p></p>
-                                    <input type="checkbox" name="loaiday" id="LoaiDay"> Dây Da
+                                    <input type="radio" name="loaiday" class="loaiday" value="Dây da"> Dây Da
                                     <p></p>
-                                    <input type="checkbox" name="loaiday" id="LoaiDay"> Dây Khác
-                                </form> 
+                                    <input type="radio" name="loaiday" class="loaiday" value="Dây khác"> Dây Khác
+                                </form>
                             </div>
                         </li>
                         <li>
                             <div class="lb2">
                                 <form action="">
-                                    <label for="" class="lb2"><h5>Màu Sắc</h5></label><p></p>
-                                    <input type="checkbox" name="MauSac" id="mausac"> Trắng <p></p>
-                                    <input type="checkbox" name="MauSac" id="mausac"> Đen <p></p>
-                                    <input type="checkbox" name="MauSac" id="mausac"> Nâu <p></p>
+                                    <label for="" class="lb2">
+                                        <h5>Màu Sắc</h5>
+                                    </label>
+                                    <p></p>
+                                    <input type="radio" name="MauSac" id="Trang" value="Trắng"> Trắng <p></p>
+                                    <input type="radio" name="MauSac" id="Den" value="Đen"> Đen <p></p>
+                                    <input type="radio" name="MauSac" id="Nau" value="Nâu"> Nâu <p></p>
                                 </form>
                             </div>
-                            
+
                         </li>
                     </ul>
                 </div>
-                        <div class="hang1">
-                            <div class="sp1">
-                                <a href=""><img src="../IMG/products/hublot/34c2cf058155a40670af6432a9f96cea.jpg" alt="" id="img1"></a>
-                                <a href=""><p>HUBLOT SPIRIT OF BIG BANG 665.0E.2080.RW.1204, 39MM</p></a>
-                                <p id="p1">Liên Hệ</p>
-                                <p>Còn Hàng</p>
-                            </div>
-                            <div class="sp1">
-                                <a href=""><img src="../IMG/products/hublot/4a24e872a5f085342b3e75cc30c5f2b0.jpg" alt="" id="img1"></a>
-                                <a href=""><p>HUBLOT CLASSIC BIG BANG SANG BLEU 465CS1114VR1200MXM18,39MM</p></a>
-                                <p id="p1">Liên Hệ</p>
-                                <p>Còn Hàng</p>
-                            </div>
-                            <div class="sp1">
-                                <a href=""><img src="../IMG/products/hublot/510_f9b692bf671c4451be8ca3f5925b9e33_master.webp" alt="" id="img1"></a>
-                                <a href=""><p>HUBLOT CLASSIC FUSION 510.CM.7170.CM, 45MM</p></a>
-                                <p id="p1">Liên Hệ</p>
-                                <p>Còn Hàng</p>
-                            </div>
-                            <div class="sp1">
-                                <a href=""><img src="../IMG/products/hublot/b7f6adf7432e1b33d565d57877014fa0.jpg" alt="" id="img1"></a>
-                                <a href=""><p>HUBLOT CLASSIC FUSION 511.CM.1771.RX, 45MM</p></a>
-                                <p id="p1">Liên Hệ</p>
-                                <p>Còn Hàng</p>
-                            </div>
-                        </div>
+                <div class="product">
+                    <div class="product-items row" name="product-items" id="Hublot"></div>
+                    <ul class="listPage"></ul>
                 </div>
+
             </div>
         </div>
-        <div class="footer">
+        <div class="footer row">
             <hr>
             <div class="footer-items">
                 <div class="footer-item">
@@ -150,12 +165,35 @@
                 </div>
                 <div class="footer-item">
                     <h2>FANPAGE</h2>
-                    
+
                 </div>
             </div>
         </div>
-
+        <!-- Modal cart -->
+        <div class="modal" id="myCart">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <table class="table table-bordered"></table>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"><a href="./giohang.html">Thanh toán</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="./giohang.html">Giỏ hàng</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- account -->
+        <div class="account">
+            <div class="login">
+                <a href="./dangnhap.html">Đăng nhập</a>
+            </div>
+            <div class="register">
+                <a href="./dangky.html">Đăng ký</a>
+            </div>
+        </div>
     </div>
-    <script src="../JS/script.js"></script>
+    <script src="../JS/Hublot.js"></script>
 </body>
 </html>
