@@ -1,4 +1,4 @@
-const products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
+const products =JSON.parse(localStorage.getItem('products'));
 let carts = JSON.parse(localStorage.getItem('carts'));
 const patekPhilippeProduct = products.filter(product => product.brand === 'Patek Philippe');
 
@@ -51,7 +51,7 @@ const newProductsTemplate = patekPhilippeProduct.map((product) => {
       </div>
       <div class="layer"></div>
       <div class="info">
-          <button type="button" class="btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
+          <button type="button" class="detail btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
           <button type="button" class="cart btn btn-secondary"><i class="bi bi-cart-plus"></i></button>
           <button type="button" class="inline btn btn-secondary"><i class="bi bi-arrow-left-right"></i></i></button>
           <button type="button" class="tim btn btn-secondary"><i class="bi bi-heart"></i></button>
@@ -113,20 +113,34 @@ btnCart.forEach((btn) => {
   });
 
 });
+// product detail
+let productDetail = JSON.parse(localStorage.getItem('productDetail'));
+const btnDetail = document.querySelectorAll('.detail');
+btnDetail.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    localStorage.removeItem('productDetail');
+    const info = btn.parentElement;
+    const item = info.parentElement.children[0];
+    const name = item.querySelector('h2').textContent;
+    productDetail = {};
+    productDetail = products.find((product) => product.name === name);
+    localStorage.setItem('productDetail', JSON.stringify(productDetail));
+  });
+});
 // Modal cart
 const cart_bar = document.querySelector('.cart-bar');
 const modal = document.querySelector('.modal');
 cart_bar.addEventListener('mouseover', () => {
-    modal.style.visibility = 'visible';
+  modal.style.visibility = 'visible';
 });
 cart_bar.addEventListener('mouseout', () => {
-    modal.style.visibility = 'hidden';
+  modal.style.visibility = 'hidden';
 });
 modal.addEventListener('mouseover', () => {
-    modal.style.visibility = 'visible';
+  modal.style.visibility = 'visible';
 })
 modal.addEventListener('mouseout', () => {
-    modal.style.visibility = 'hidden';
+  modal.style.visibility = 'hidden';
 })
 
 // show modal cart
@@ -136,8 +150,7 @@ const cartsModal = JSON.parse(localStorage.getItem('carts')) || [];
 if (cartsModal.length == 0) {
   table.innerHTML = '<h2>Không có sản phẩm';
   cartModal.style.height = "auto";
-}
-else{
+} else {
   const cartTemplete = cartsModal.map((cart) => {
     return `
     <tr>
@@ -224,7 +237,7 @@ if (patekPhilippeProduct.length > 0) {
 // end pagination
 // account
 const btnAccount = document.querySelector('.account-bar').querySelector('button');
-btnAccount.addEventListener('click', ()=>{
+btnAccount.addEventListener('click', () => {
   const account = document.querySelector('.account');
   account.style.visibility = account.style.visibility === 'visible' ? 'hidden' : 'visible';
 });

@@ -461,18 +461,13 @@ let productDetail = JSON.parse(localStorage.getItem('productDetail'));
 const btnDetail = document.querySelectorAll('.detail');
 btnDetail.forEach((btn) => {
   btn.addEventListener('click', () => {
+    localStorage.removeItem('productDetail');
     const info = btn.parentElement;
     const item = info.parentElement.children[0];
     const name = item.querySelector('h2').textContent;
-    if (productDetail !== null) {
-      productDetail = products.find((product) => product.name === name);
-      localStorage.removeItem('productDetail');
-      localStorage.setItem('productDetail', JSON.stringify(productDetail));
-    } else {
-      productItem = {};
-      productDetail = products.find((product) => product.name === name);
-      localStorage.setItem('productDetail', JSON.stringify(productDetail));
-    }
+    productDetail = {};
+    productDetail = products.find((product) => product.name === name);
+    localStorage.setItem('productDetail', JSON.stringify(productDetail));
   });
 });
 
@@ -517,7 +512,7 @@ btns.forEach((btn) => {
             </div>
             <div class="layer"></div>
             <div class="info">
-                <button type="button" class="btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
+                <button type="button" class="detail btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
                 <button type="button" class="cart btn btn-secondary"><i class="bi bi-cart-plus"></i></button>
                 <button type="button" class="inline btn btn-secondary"><i class="bi bi-arrow-left-right"></i></i></button>
                 <button type="button" class="tim btn btn-secondary"><i class="bi bi-heart"></i></button>
@@ -583,18 +578,13 @@ btns.forEach((btn) => {
       const btnDetail = document.querySelectorAll('.detail');
       btnDetail.forEach((btn) => {
         btn.addEventListener('click', () => {
+          localStorage.removeItem('productDetail');
           const info = btn.parentElement;
           const item = info.parentElement.children[0];
           const name = item.querySelector('h2').textContent;
-          if (productDetail !== null) {
-            productDetail = products.find((product) => product.name === name);
-            localStorage.removeItem('productDetail');
-            localStorage.setItem('productDetail', JSON.stringify(productDetail));
-          } else {
-            productItem = {};
-            productDetail = products.find((product) => product.name === name);
-            localStorage.setItem('productDetail', JSON.stringify(productDetail));
-          }
+          productDetail = {};
+          productDetail = products.find((product) => product.name === name);
+          localStorage.setItem('productDetail', JSON.stringify(productDetail));
         });
       });
       // selling products
@@ -622,7 +612,7 @@ btns.forEach((btn) => {
             </div>
             <div class="layer"></div>
             <div class="info">
-                <button type="button" class="btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
+                <button type="button" class="detail btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
                 <button type="button" class="cart btn btn-secondary"><i class="bi bi-cart-plus"></i></button>
                 <button type="button" class="inline btn btn-secondary"><i class="bi bi-arrow-left-right"></i></i></button>
                 <button type="button" class="tim btn btn-secondary"><i class="bi bi-heart"></i></button>
@@ -689,18 +679,13 @@ btns.forEach((btn) => {
       const btnDetail = document.querySelectorAll('.detail');
       btnDetail.forEach((btn) => {
         btn.addEventListener('click', () => {
+          localStorage.removeItem('productDetail');
           const info = btn.parentElement;
           const item = info.parentElement.children[0];
           const name = item.querySelector('h2').textContent;
-          if (productDetail !== null) {
-            productDetail = products.find((product) => product.name === name);
-            localStorage.removeItem('productDetail');
-            localStorage.setItem('productDetail', JSON.stringify(productDetail));
-          } else {
-            productItem = {};
-            productDetail = products.find((product) => product.name === name);
-            localStorage.setItem('productDetail', JSON.stringify(productDetail));
-          }
+          productDetail = {};
+          productDetail = products.find((product) => product.name === name);
+          localStorage.setItem('productDetail', JSON.stringify(productDetail));
         });
       });
     }
@@ -795,18 +780,13 @@ btns.forEach((btn) => {
       const btnDetail = document.querySelectorAll('.detail');
       btnDetail.forEach((btn) => {
         btn.addEventListener('click', () => {
+          localStorage.removeItem('productDetail');
           const info = btn.parentElement;
           const item = info.parentElement.children[0];
           const name = item.querySelector('h2').textContent;
-          if (productDetail !== null) {
-            productDetail = products.find((product) => product.name === name);
-            localStorage.removeItem('productDetail');
-            localStorage.setItem('productDetail', JSON.stringify(productDetail));
-          } else {
-            productItem = {};
-            productDetail = products.find((product) => product.name === name);
-            localStorage.setItem('productDetail', JSON.stringify(productDetail));
-          }
+          productDetail = {};
+          productDetail = products.find((product) => product.name === name);
+          localStorage.setItem('productDetail', JSON.stringify(productDetail));
         });
       });
     }

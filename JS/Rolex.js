@@ -51,7 +51,7 @@ const newProductsTemplate = rolexProduct.map((product) => {
       </div>
       <div class="layer"></div>
       <div class="info">
-          <button type="button" class="btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
+          <button type="button" class="detail btn btn-secondary"><a href="./chitietsanpham.html">Xem chi tiết</a></button>
           <button type="button" class="cart btn btn-secondary"><i class="bi bi-cart-plus"></i></button>
           <button type="button" class="inline btn btn-secondary"><i class="bi bi-arrow-left-right"></i></i></button>
           <button type="button" class="tim btn btn-secondary"><i class="bi bi-heart"></i></button>
@@ -112,6 +112,20 @@ btnCart.forEach((btn) => {
     }
   });
 
+});
+// product detail
+let productDetail = JSON.parse(localStorage.getItem('productDetail'));
+const btnDetail = document.querySelectorAll('.detail');
+btnDetail.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    localStorage.removeItem('productDetail');
+    const info = btn.parentElement;
+    const item = info.parentElement.children[0];
+    const name = item.querySelector('h2').textContent;
+    productDetail = {};
+    productDetail = products.find((product) => product.name === name);
+    localStorage.setItem('productDetail', JSON.stringify(productDetail));
+  });
 });
 // Modal cart
 const cart_bar = document.querySelector('.cart-bar');

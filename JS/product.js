@@ -1,4 +1,4 @@
-const products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
+const products =JSON.parse(localStorage.getItem('products'));
 let carts = JSON.parse(localStorage.getItem('carts'));
 
 //menu bar
@@ -113,23 +113,18 @@ btnCart.forEach((btn) => {
 });
 // product detail
 let productDetail = JSON.parse(localStorage.getItem('productDetail'));
-const btnDetail = document.querySelectorAll('.detail');
-btnDetail.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const info = btn.parentElement;
-    const item = info.parentElement.children[0];
-    const name = item.querySelector('h2').textContent;
-    if (productDetail !== null) {
-      productDetail = products.find((product) => product.name === name);
-      localStorage.removeItem('productDetail');
-      localStorage.setItem('productDetail', JSON.stringify(productDetail));
-    } else {
-      productItem = {};
-      productDetail = products.find((product) => product.name === name);
-      localStorage.setItem('productDetail', JSON.stringify(productDetail));
-    }
-  });
-});
+      const btnDetail = document.querySelectorAll('.detail');
+      btnDetail.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          localStorage.removeItem('productDetail');
+          const info = btn.parentElement;
+          const item = info.parentElement.children[0];
+          const name = item.querySelector('h2').textContent;
+          productDetail = {};
+          productDetail = products.find((product) => product.name === name);
+          localStorage.setItem('productDetail', JSON.stringify(productDetail));
+        });
+      });
 // Modal cart
 const cart_bar = document.querySelector('.cart-bar');
 const modal = document.querySelector('.modal');
