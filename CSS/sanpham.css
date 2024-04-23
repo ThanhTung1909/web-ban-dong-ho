@@ -2,7 +2,7 @@
 .content{
     width: 102.3%;
     height: 1500px;
-    background-color: #1c1c1c;
+    background-color: rgb(52, 52, 52);
     color: aliceblue;
     display: block;
     position: relative;
@@ -44,7 +44,7 @@
     width: 77%;
     height: 1200px;
     display: flex;
-    background-color: #1c1c1c;
+    background-color: rgb(52, 52, 52);
     box-sizing: border-box;
     flex-direction: column;
 }

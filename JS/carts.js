@@ -86,3 +86,54 @@ btnAccount.addEventListener('click', ()=>{
   const account = document.querySelector('.account');
   account.style.visibility = account.style.visibility === 'visible' ? 'hidden' : 'visible';
 });
+// Modal cart
+const cart_bar = document.querySelector('.cart-bar');
+const modal = document.querySelector('.modal');
+cart_bar.addEventListener('mouseover', () => {
+  modal.style.visibility = 'visible';
+});
+cart_bar.addEventListener('mouseout', () => {
+  modal.style.visibility = 'hidden';
+});
+modal.addEventListener('mouseover', () => {
+  modal.style.visibility = 'visible';
+})
+modal.addEventListener('mouseout', () => {
+  modal.style.visibility = 'hidden';
+})
+
+// show modal cart
+const cartModal = document.querySelector('.modal-body');
+const table1 = cartModal.querySelector('table');
+const cartsModal = JSON.parse(localStorage.getItem('carts')) || [];
+if (cartsModal.length == 0) {
+  table1.innerHTML = '<h2>Không có sản phẩm';
+  cartModal.style.height = 'auto';
+} else {
+  const cartTemplete = cartsModal.map((cart) => {
+    return `
+    <tr>
+        <td><img src="${cart.img}" alt=""></td>
+        <td>
+            <p>${cart.name}</p>
+            <p>${cart.style}</p>
+            <p>${cart.price}</p>
+            <p>X ${cart.qty}</p>
+        </td>
+        <td><button type="button">&times;</button></td>
+    </tr>
+    `
+  });
+  table1.innerHTML = cartTemplete.join('');
+  const cartBar = document.querySelector('.cart-bar').querySelector('input');
+  cartBar.value = cartsModal.length;
+}
+// remove product modal cart
+const btnRemove = document.querySelectorAll('.modal-body button');
+btnRemove.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    cartsModal.splice(index, 1);
+    localStorage.setItem('carts', JSON.stringify(cartsModal));
+    location.reload();
+  });
+});

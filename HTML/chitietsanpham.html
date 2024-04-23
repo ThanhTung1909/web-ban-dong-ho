@@ -9,8 +9,9 @@
 
   <title>Watch</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../CSS/chitietsanpham.css">
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/chitietsanpham.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -77,37 +78,35 @@
         </div>
       </nav>
     </div>
-    <div class="content">
+    <div class="content row">
       <div class="title">
         <h1>Sản phẩm</h1>
         <h5>
           <span><a href="./Home.html">Trang chủ</a></span> <span>/</span>
           <span><a href="./SanPham.html">Sản phẩm</a></span> <span>/</span>
-          <span><a href="#" id="brand"></a></span>
+          <span><a href="#" id="brand" style="color: #a8741a;"></a></span>
         </h5>
       </div>
       <div class="main">
+        <div class="main-left1 col-7">
+          <div class="main-left-img" id="second">
+            <!-- <img src="../IMG/products/rolex/1-0569439f-ae47-460c-9f94-88c6fbbe29c6.webp" alt="" id="img"> -->
+          </div>
+        </div>
         <div class="main-left col-5">
-          <div class="main-left-img">
-            <img src="../IMG/products/rolex/1-0569439f-ae47-460c-9f94-88c6fbbe29c6.webp" alt="" id="img">
+          <div class="main-left-img" id="first">
+            <!-- <img src="../IMG/products/rolex/1-0569439f-ae47-460c-9f94-88c6fbbe29c6.webp" alt="" id="img"> -->
+            <span id="lens"></span>
           </div>
           <div class="main-left-list">
             <div class="list-item">
-              <img src="../IMG/products/rolex/11ef51085f08c5f3e8e4cac1feedd63a.jpg" alt="">
+              <img src="../IMG/products/rolex/11ef51085f08c5f3e8e4cac1feedd63a.jpg" alt="" id="img1">
             </div>
-            <div class="list-item">
-              <img src="../IMG/products/rolex/9ee728ce68209ed84a9bda79ed7fd937.jpg" alt="">
-            </div>
-            <div class="list-item">
-              <img src="../IMG/products/hublot/34c2cf058155a40670af6432a9f96cea.jpg" alt="">
-            </div>
-            <div class="list-item">
-              <img src="../IMG/products/hublot/b7f6adf7432e1b33d565d57877014fa0.jpg" alt="">
-            </div>
+
           </div>
         </div>
         <div class="main-right col-6">
-          <div class="main-right-title">
+          <div>
             <h2 id="name">Rolex</h2>
             <p id="price">100.000.000 VND</p>
             <p id="id"><b>Mã sản phẩm: </b><span></span></p>
@@ -115,36 +114,38 @@
             <p id="modelNumber"><b>Model Number: </b><span></span></p>
             <p id="collection"><b>Collection: </b><span></span></p>
             <p id="style"><b>Kiểu dáng: </b><span></span></p>
-            <p id="qty"><b>Số lượng: </b><input type="number" name="" id="" value="1"></p>
-            <button type="button" class="btn btn-primary"><i class="bi bi-basket2-fill"></i>Thêm vào giỏ hàng</button>
-            <button type="button" class="btn btn-primary"><i class="bi bi-heart"></i></button>
-            <div class="share">
-              <p>Chia sẻ:</p>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-            </div>
-            <div class="tag">
-              <p>Tags:</p>
-              <a href="#">Rolex</a>
-              <a href="#">Đồng hồ</a>
-              <a href="#">Đồng hồ Rolex</a>
-            </div>
-            <div class="comment">
-              <p>Bình luận</p>
-              <p><span style="color: rgb(41, 40, 40);">0 bình luận</span>
-                <span style="margin-left: 47%;">Sắp xếp theo
-                  <select name="" id="">
-                    <option value="">Cũ nhất</option>
-                  </select></span>
-              </p>
-              <hr>
-              <input type="text">
-              <button type="button">Đăng</button>
-
-            </div>
+            <p id="qty"><b>Số lượng: </b><input type="number" name="" id="quantity" value="1"></p>
+            <button type="button" class="btn btn-primary" id="addCart"><i class="bi bi-basket2-fill" ></i>Thêm vào giỏ hàng</button>
+            <button type="button" class="btn btn-primary"><i class="bi bi-heart-fill"></i></button>
           </div>
+          <div class="share">
+            <p>Chia sẻ:</p>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <div class="tag">
+            <p>Tags:</p>
+            <a href="#">Rolex</a>
+            <a href="#">Đồng hồ</a>
+            <a href="#">Đồng hồ Rolex</a>
+          </div>
+          <div class="comment">
+            <p>Bình luận</p>
+            <p><span style="color: rgb(41, 40, 40);">0 bình luận</span>
+              <span style="margin-left: 47%;">Sắp xếp theo
+                <select name="" id="">
+                  <option value="">Cũ nhất</option>
+                </select></span>
+            </p>
+            <hr>
+            <input type="text">
+            <button type="button">Đăng</button>
+          </div>
+          
+          </div>
+          
         </div>
         <div class="describe">
           <hr>
@@ -189,13 +190,12 @@
       </div>
 
 
-      <div class="footer">
-        <hr />
+      <div class="footer row">
+        <hr>
         <div class="footer-items">
           <div class="footer-item">
             <h2>VỀ CHÚNG TÔI</h2>
             <p>Phạm Thanh Tùng - 22700371</p>
-            <p>Lương Điền Đông - 22663001</p>
           </div>
           <div class="footer-item">
             <h2>DANH MỤC SẢN PHẨM</h2>
@@ -213,6 +213,7 @@
           </div>
           <div class="footer-item">
             <h2>FANPAGE</h2>
+
           </div>
         </div>
       </div>
